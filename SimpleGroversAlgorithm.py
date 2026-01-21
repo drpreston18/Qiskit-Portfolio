@@ -29,6 +29,7 @@ def diffuser( UserQuantumCircuit, QubitNumber ):
     UserQuantumCircuit.h( range( QubitNumber ) )
     return UserQuantumCircuit
 
+# Delcare & Initialize a quantum circuit with three qubits
 QC = QuantumCircuit( 3 )
 
 # Alpha calculation for number of iterations.
@@ -43,15 +44,17 @@ for i in range( Iterations ):
     oracle( QC, 3 )
     diffuser( QC, 3 )
 
+# Measure all qubits in our quantum circuit
 QC.measure_all()
 
-# Simulate complied circuit & plot results as a histogram. 
+# Simulate complied circuit & Store results in Counts. 
 Simulator = AerSimulator()
 CompiledQC = transpile( QC, Simulator )
 #Output = Simulator.run( CompiledQC, shots = 1024 )
 Result  = Simulator.run( CompiledQC, shots = 1024 ).result()
 Counts = Result.get_counts()
 
+# Print number of counts for each state & plot distribution 
 print( f"Counts: { Counts }" )
 plot_distribution( Counts )
 plt.show()
