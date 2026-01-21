@@ -50,7 +50,6 @@ QC.measure_all()
 # Simulate complied circuit & Store results in Counts. 
 Simulator = AerSimulator()
 CompiledQC = transpile( QC, Simulator )
-#Output = Simulator.run( CompiledQC, shots = 1024 )
 Result  = Simulator.run( CompiledQC, shots = 1024 ).result()
 Counts = Result.get_counts()
 
@@ -58,3 +57,4 @@ Counts = Result.get_counts()
 print( f"Counts: { Counts }" )
 plot_distribution( Counts )
 plt.show()
+
