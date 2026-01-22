@@ -19,4 +19,4 @@ This program demonstrates a simple implementation of Grover's algorithm using th
 Final probability distribution of our search algorithm. 
 Note: this is just one possible probability distribution; if you run this program a few times, probability distributions will vary slightly.  
 
-![ GroversAlgorithmProbabilityDistribution ]( Assets/GroversAlgorithmProbabilityDistribution )
+![ GroversAlgorithmProbabilityDistribution ]( Assets/GroversAlgorithmProbabilityDistribution.png )
