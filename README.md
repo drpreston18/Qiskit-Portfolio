@@ -5,6 +5,8 @@ QuantumTeleportationCircuit.py:
 This program simulates a basic teleportation circuit utilizing two registers: one for the qubits and another for classical bits, each of length 3. Our target qubit for teleportation is initialized to some arbitrary unique state before teleportation, so to account for the fact that it is in some unknown state, we must first map it to a Bloch sphere to verify that our initial and final states are indicative of state teleportation. Afterwards we apply our teleportation circuit, which consists of a Bell state generator operated between qubits one and two followed by a Bell state analyzer operated on qubits 0 and 1. Then we measure qubits 0 and 1 and store them as classical bits in indices 0 and 1 respectively. Afterwards we apply our conditional gates based on our measurements and apply our X and Z gates as necessary before mapping our statevector to the Bloch sphere. 
 
 See Assets folder, which contains pngs for one instances of the teleportation circuit. 
+Note: This program psuedo-randomly generates the initial state that will be teleported, so this is just one example of this program's output. 
+
 Initial States:
 ![ InitialStates ]( Assets/InitialStates.png )
 Final States:
